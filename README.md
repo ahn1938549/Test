@@ -1,5 +1,5 @@
 
-# Very Deep Convolutional Networks For Large-Scale Image Recognition '10 Apr 2015'
+# ImageNet Classification with Deep Convolutional Neural Networks
 
 ## Abstract
 
@@ -9,7 +9,7 @@
       
   - 'Dropout'의 기법을 제시하며, overfitting을 방지하는 방법을 제시하였다. 
   
-  - ILSVRC-2012 15.3%의 Error로 우승!
+  
     
 ***
 
@@ -27,8 +27,12 @@
 ### ConvNet Architecture Setting & Reasons for selection
 
 1. Input Image
+
+    - 주어진 이미지에서 가장 작은 부분을 256으로 고정 하고, 다른 부분을 256으로 crop 하여 256 X 256 resolution 으로 down sample 한 이미지를 사용하였다.  
     
-    - 227 X 227 resolution RGB 이미지 
+    - 227 X 227 resolution RGB 이미지
+
+     
     
 2. Activation Func
 
@@ -72,7 +76,7 @@
 
 5. FC Layer
   
-  - 4096 -> 4096 -> 1000 - Softmax의 구조 
+  - 3 FC Layer를 사용하여 계산 후에 1000 way - softmax를 통하여 label을 분류하였다.
   
     - Test 과정에서는 Fully Convolutional Network로 바뀌며, FC layer를 잘라낸다.
     
@@ -178,17 +182,8 @@ ILSVRC - 2010
 ILSVRC - 2012 
   
   ![2012](https://user-images.githubusercontent.com/69898343/118216401-65ca5480-b4ae-11eb-8410-d068e17589ff.png)
-
-
-  - 모델의 성능은 2가지 방법으로 측정
-  
-    - 1 Top / 5 Top
     
-      1. 1 Top : 잘 못 예측된 이미지의 비율
-      2. 5 Top : 예측 이미지가 상위 5개의 카테고리 밖에 있을 때의 비율 
-
-    ![hjgkhjgj](https://user-images.githubusercontent.com/59076451/118116407-34597680-b425-11eb-800c-0f126b31203c.PNG)
-    
+    - ILSVRC-2012 15.3%의 Error로 2등인 26.2%와 10.9%의 차이로 우승!
     
   
 ***
