@@ -4,7 +4,7 @@
 
 ### Overall Architecture
 
-![dropout](https://user-images.githubusercontent.com/69898343/118242891-c4a4c380-b4d8-11eb-99cd-41ff882317d3.png)
+![alxnet](https://user-images.githubusercontent.com/69898343/118252613-ea839580-b4e3-11eb-800c-7a41214f7a65.png)
 
 1. Convolution 1 Layer
 
